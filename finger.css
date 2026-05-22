@@ -1,0 +1,69 @@
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#000;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.scan{
+    text-align:center;
+}
+
+.fingerprint{
+    position:relative;
+    width:200px;
+    height:200px;
+    background:url("piik/Modern\ Bali\ Book\ Cover.pdf");
+    background-size:cover;
+}
+
+/* scanning line */
+
+.fingerprint::before{
+    content:'';
+    position:absolute;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#00ffff;
+    animation:scan 3s linear infinite;
+}
+
+/* scanning animation */
+
+@keyframes scan{
+    0%{
+        top:0;
+    }
+
+    50%{
+        top:195px;
+    }
+
+    100%{
+        top:0;
+    }
+}
+
+h3{
+    color:#00ffff;
+    margin-top:20px;
+    letter-spacing:3px;
+    animation:blink 1s infinite;
+}
+
+/* text blinking */
+
+@keyframes blink{
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0.2;
+    }
+}
